@@ -1,0 +1,11 @@
+stages:
+  - deploy
+job_dev:
+    stage: deploy
+    when: always
+    script:
+      - village
+    only:
+      - master
+    tags:
+      - dev
